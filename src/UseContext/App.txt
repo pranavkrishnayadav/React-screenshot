@@ -1,0 +1,10 @@
+import React from 'react'
+
+import ComponetA from './UseContext/ComponentA'
+const App = () => {
+  return (
+    <ComponetA/>
+  )
+}
+
+export default App

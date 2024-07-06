@@ -1,0 +1,28 @@
+import React, { useState } from 'react'
+import ThemeContext from './Context/ThemeContext'
+import Toolbar from './Components/Toolbar'
+
+import './App.css'
+const App = () => {
+
+  const [theme,setTheme] = useState('light');
+
+  const toggleTheme = ()=>{
+    setTheme((prevtheme) => (prevtheme==='light'?'dark':'light'));
+  }
+  return (
+
+    <ThemeContext.Provider value={theme}>
+
+       <div>
+        <button onClick={toggleTheme}>Toggle Theme</button>
+      <Toolbar/>
+      </div>
+
+    </ThemeContext.Provider>
+   
+  )
+}
+
+export default App
+
